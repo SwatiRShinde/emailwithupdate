@@ -1,0 +1,29 @@
+<mat-toolbar class="mat-elevation-z20 navcolor">
+    <span><mat-icon>eco</mat-icon>BestifyYourTime</span>
+
+    <div class="spacer">
+
+    </div>
+    <div *ngIf="!deviceXs" id="myLinks"> <!--(false)  result.mqAlias=="xs"? true :false;-->
+        <a mat-button routerLink="home">Home</a>
+        <a mat-button routerLink="service">Services</a>
+        <a mat-button routerLink="about" >About Us</a>
+        <a mat-button  routerLink="register">Sign Up</a>
+        <a mat-button  id="logout">Logout</a>
+    </div>
+
+    <div *ngIf="deviceXs">
+        <div class="dropdown">
+            <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+            <span *ngIf="deviceXs">Menu</span>
+            <div class="dropdown-content">
+              <a href="#">Home</a>
+              <a href="#">Services</a>
+              <a href="#">About Us</a>
+              <a routerLink="register">Sign Up</a>
+              <a mat-button id="logout1">Logout</a>
+            </div>
+          </div>
+    </div>
+
+</mat-toolbar>

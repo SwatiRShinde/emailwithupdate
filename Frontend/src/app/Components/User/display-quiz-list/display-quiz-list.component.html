@@ -1,0 +1,29 @@
+
+<!-- <mat-list role="list">
+  <mat-list-item *ngFor="let i of quizList">
+   
+  </mat-list-item>
+</mat-list> -->
+
+<!-- <mat-nav-list>
+  <a mat-list-item href="..." *ngFor="let i of quizList"> 
+    <mat-icon id="i.quizId" (click)="addToFav(i.quizId)" >favorite</mat-icon>
+    {{ i.quizName}}
+  </a>
+</mat-nav-list> -->
+
+ 
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav">
+     
+      <li *ngFor="let i of quizName;" value="{{i.quizName}}" >
+        <a href="#" routerLink="/quizLists/{{i.quizId}}">{{ i.quizName}}</a>
+      </li>
+    
+     
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<form class="example-form formDisplay">
+    <div class="row content">
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Add new category : </mat-label>
+                <input matInput name="category" value="" [(ngModel)]="category">
+              </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="accent" (click)="addCategory()">Add</button>
+        </div>
+    </div>
+</form>
+
+<a class="btn btn-primary" routerLink="createQuiz">Create New Quiz</a>
+<br>
+<!-- <a class="btn btn-primary" routerLink="DisplayNewQuiz">Display New Quiz</a> -->
+
+
+

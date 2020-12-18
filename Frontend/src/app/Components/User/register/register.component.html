@@ -1,0 +1,83 @@
+<!-- <mat-card class="example-card center-content">
+    <mat-card-header>
+      <mat-card-title>Login here</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+   
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab label="Login">
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Favorite food</mat-label>
+                      <input matInput placeholder="Ex. Pizza" value="Sushi">
+                    </mat-form-field>
+                  
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Leave a comment</mat-label>
+                      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                    </mat-form-field>
+                  </form>
+                  
+
+                  
+            </mat-tab>
+            <mat-tab label="Sign Up">
+                 Content 2 
+            </mat-tab>
+          </mat-tab-group>
+    </mat-card-content>
+  </mat-card> -->
+
+<div class="center-content container">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title class="title">Welcome to GameFun</mat-card-title>
+            <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-card-header>
+        <mat-card-content>
+            <mat-tab-group>
+                <mat-tab label="Login">
+                    <form class="example-form"  #userForm="ngForm" >
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Email</mat-label>
+                          <input matInput [(ngModel)]="logEmail" name="signUpEmail">
+                          
+                        </mat-form-field>
+                      
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Password</mat-label>
+                          <input matInput [(ngModel)]="logPassword" name="signUpPassword1">
+                        </mat-form-field>
+                        <button class="buttons" (click)="login()" mat-raised-button color="primary">Login</button>
+                      </form>
+                    
+                </mat-tab>
+                <mat-tab label="Sign Up">
+                    <form class="example-form" #adduser="ngForm">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>User name</mat-label>
+                          <input matInput [(ngModel)]="usr.signUpName" name="signUpName">
+                        </mat-form-field>
+                      
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Email</mat-label>
+                          <input matInput [(ngModel)]="usr.signUpEmail" name="signUpEmail">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Password</mat-label>
+                            <input matInput [(ngModel)]="usr.signUpPassword1" name="signUpPassword1">
+                          </mat-form-field>
+                        
+                          <mat-form-field class="example-full-width">
+                            <mat-label>Confirm password</mat-label>
+                            <input matInput [(ngModel)]="usr.signUpPassword2" name="signUpPassword2">
+                          </mat-form-field>
+                    <button class="buttons" type="submit" mat-raised-button (click)="signup()" color="primary">Sign Up</button>
+                    </form>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card-content>
+    </mat-card>
+
+</div>
